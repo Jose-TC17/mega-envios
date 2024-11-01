@@ -10,6 +10,8 @@ import imgArequipa from "../img/imgArequipa.jpg";
 import imgCuzco from "../img/imgCuzco.jpg";
 import imgAmazonas from "../img/imgAmazonas.jpg";
 
+import banner from "../img/fondoMegaEnvios.png";
+
 
 export default function Index() {
 
@@ -19,6 +21,10 @@ export default function Index() {
         <>
             <Header />
             <section className="section">
+            <figure className="banner">
+              <img src={banner} alt="banner" />
+            </figure>
+
         <h1 className="section-title">Envíos a Nivel Nacional</h1>
         <div className="container-note">
           <p className="section-p">

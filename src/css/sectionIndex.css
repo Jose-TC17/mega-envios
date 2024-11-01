@@ -1,9 +1,26 @@
+/* estilos de la seccion */
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     width: 100%;
+}
+
+/* estilos de los banners */
+.banner {
+    width: 70%;
+    max-width: 1500px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 55vh;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.479);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
 }
 
 .section-title {
