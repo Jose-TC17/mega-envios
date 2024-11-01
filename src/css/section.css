@@ -1,0 +1,103 @@
+/* estilos del contenedor de arriba */
+.container-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* boton de regresar */
+.link-index {
+    background: rgb(0, 153, 255);
+    left: 20px;
+    transition: .3s;
+    top: 15px;
+    position: absolute;
+    color: var(--color-white);
+    font-family: system-ui;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+/* boton de regresar al pasar el cursor */
+.link-index:hover {
+    background: rgb(11, 137, 221);
+}
+
+/* estilos del titulo */
+.section-title {
+    font-family: system-ui;
+    font-size: 28px;
+}
+
+/* estilos del contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* estilos del content */
+.content-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* estilo del texto de buscar */
+.search-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: system-ui;
+    text-transform: uppercase;
+    color: var(--color-lightblue);
+}
+
+/* estilos del buscador */
+.search {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--color-lightblue);
+    border-radius: 5px;
+    box-shadow: 0 0 10px transparent;
+    transition: box-shadow .3s;
+}
+
+.search:focus {
+    box-shadow: 0 0 10px var(--color-lightblue);
+    outline: 2px solid var(--color-lightblue);
+    border: none;
+    transition: box-shadow .3s;
+}
+
+/* estilos del contenedor donde estaran los distritos o provincias */
+.container-elements {
+    display: flex;
+    width: 800px;
+    max-width: 800px;
+    min-height: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(187, 187, 187) ;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.116);
+}

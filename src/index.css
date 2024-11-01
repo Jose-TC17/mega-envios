@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #fff;
+    --color-blue: #004aad;
+    --color-blue-dark2: #003a75;
+    --color-blue-dark: #004085;
+    --color-gray-scrollbar: #c1c1c1;
+    --color-lightblue: #1178cc;
+}
+
+/* estilos para el scroll de la página */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 12px;
+    background: var(--color-gray-scrollbar);
+    border: 2px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+
+img::selection {
+    display: none;
+}
+
