@@ -53,7 +53,7 @@ export default function Index() {
       <section className="section-two">
         {sectionSends.map((element, index) => (
           <div className={element[0]} key={index}>
-            <h3>{element[1]}</h3>
+            <h3>Mega <span>{element[1]}</span></h3>
             <figure className="sectionTwo-figure">
               <img
                 className="sectionTwo-img"

@@ -1,3 +1,4 @@
+/* estilos del header */
 .header {
     display: flex;
     flex-direction: row;
@@ -16,13 +17,29 @@
     margin-left: 20px;
 }
 
+.header-picture img {
+    width: 120px;
+}
+
+@media (min-width: 600px) {
+    .header-picture {
+        width: auto;
+        margin-left: 10px;
+    }
+    
+    .header-picture img {
+        width: 150px;
+    }    
+}
+
+
 .header-link-home {
     background: #3598f5;
     transition: .3s;
     padding: 10px 15px;
     border-radius: 10px;
     font-family: system-ui;
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     margin-right: 20px;
 }

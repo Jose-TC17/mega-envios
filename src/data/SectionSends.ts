@@ -3,8 +3,8 @@ import imgMapPeruLima from "../img/MapaPeruLima.png"
 
 
 const sectionSends: string[][] = [
-  ["enviosLima", "Envíos a todo Lima - Callao", imgMapPeruLima, "./envios-lima", ],
-  ["enviosProvincia", "Envíos a Provincias", imgMapPeru, "./envios-provinciales"],
+  ["megaEnvios", "Envíos", imgMapPeruLima, "./envios-lima",],
+  ["megaEnviosExpress", "Envíos EXPRESS", imgMapPeru, "./envios-provinciales",],
 ];
 
 

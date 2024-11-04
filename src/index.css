@@ -6,11 +6,13 @@
 
 :root {
     --color-white: #fff;
+    --color-red: #f00;
     --color-blue: #004aad;
     --color-blue-dark2: #003a75;
     --color-blue-dark: #004085;
     --color-gray-scrollbar: #c1c1c1;
     --color-lightblue: #1178cc;
+     --color-yellow: #fcbc2e;
 }
 
 /* estilos para el scroll de la página */

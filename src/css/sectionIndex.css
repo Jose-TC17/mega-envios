@@ -7,54 +7,80 @@
     width: 100%;
 }
 
-/* estilos de los banners */
+/* estilos del banner de inicio */
 .banner {
-    width: 70%;
-    max-width: 1500px;
+    width: 90%;
     margin-top: 20px;
-    border-radius: 10px;
-    height: 55vh;
+    background-size: cover;
     overflow: hidden;
-    background: rgba(128, 128, 128, 0.479);
+    transition: .3s;
+    height: auto;
 }
 
+/* estilos de los banners */
+@media (min-width: 1500px) {
+    .banner {
+        width: 1500px;
+        height: 55vh;
+        max-width: 1500px;
+        margin-top: 20px;
+    }
+}
+
+/* estilos de la imagen que esta dentro del banner */
 .banner img {
     width: 100%;
     height: 100%;
 }
 
+/* titulo de la seccion */
 .section-title {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px !important;
     font-family: System-ui;
-    font-size: 38px;
+    text-transform: uppercase;
+    font-size: 1.5rem !important;
+    margin: 0 10px;
+    color: var(--color-blue-dark);
 }
 
+/* estilos del contenedor de texto */
 .container-note {
-    width: 500px;
+    display: flex;
+    width: 90%;
     height: auto;
     box-shadow: 0 4px 8px rgba(139, 139, 139, 0.5);
     padding: 10px;
     transition: .3s;
+    margin: 0 10px;
     border-radius: 15px;
     margin-top: 30px;
+}
+
+@media (min-width: 610px) {
+    .container-note {
+        width: 600px;
+    }
 }
 
 .container-note:hover {
     box-shadow: 2px 4px 10px rgba(139, 139, 139, 0.5);
 }
 
+/* estilos de la letra */
 .section-p {
     font-family: system-ui;
     padding: 0 15px 15px 15px;
 }
 
+/* estilo del span */
 .section-p span{
     color: rgb(43, 167, 43);
     font-weight: 600;
     line-height: 30px;
 }
 
+/* estilo del slider de las imagenes */
 .slider-images {
     width: 70%;
     align-items: center;
@@ -63,6 +89,7 @@
     margin-top: 60px;
 }
 
+/* estilo del contenedor de las imagenes */
 .container-imgs {
     display: flex;
     flex-direction: row;
@@ -83,60 +110,114 @@
     }
 }
 
+/* estilo de la etiqueta figure */
 .st-figure {
     width: auto;
     height: 200px;
     overflow: hidden;
 }
 
+/* estilo de las imagenes */
 .st-figure img {
     width: 100%;
     height: 100%;
     transition: .3s;
 }
 
+/* estilos cuando el mouse pase por el elemento */
 .container-imgs:hover {
     animation-play-state: paused;
 }
+
 .st-figure img:hover {
     transform: scale(1.1);
 }
 
 /*  */
 
+/* estilo de la segundo seccion */
 .section-two {
     width: 100%;
     margin-top: 90px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 60px;
     justify-content: space-evenly;
 }
 
-.enviosLima, .enviosProvincia{
+
+/* estilos de las seccion a escoger */
+.megaEnvios, .megaEnviosExpress{
     display: flex;
+    width: 90%;
     flex-direction: column;
     align-items: center;
     transition: .3s;
+    overflow: hidden;
+    gap: 20px;
     justify-content: center;
-    padding: 40px 60px;
+    padding: 40px 30px;
     border-radius: 15px;
 }
 
-.enviosLima:hover, .enviosProvincia:hover{
+@media (min-width: 500px) {
+    .megaEnvios, .megaEnviosExpress{
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .megaEnvios, .megaEnviosExpress{
+        width: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .megaEnvios, .megaEnviosExpress{
+        padding: 40px 60px;
+    }
+}
+
+.megaEnvios:hover, .megaEnviosExpress:hover{
     background: rgb(248, 248, 248);
 }
 
-
+/* estilos del titulo */
 .section-two h3 {
-    font-size: 28px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-blue-dark);
     font-family: system-ui;
+}
+
+@media (min-width: 400px) {
+    .section-two h3 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 600px) {
+    .section-two h3 {
+        font-size: 24px;
+    }
+}
+
+.section-two h3 span {
+    font-weight: 800;
+    color: var(--color-yellow);
 }
 
 .sectionTwo-figure {
     margin-top: 20px;
-    width: 300px;
+    width: 250px;
+}
+
+@media (min-width: 400px) {
+    .sectionTwo-figure {
+        margin-top: 20px;
+        width: 300px;
+    }
 }
 
 .sectionTwo-img {

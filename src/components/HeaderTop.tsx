@@ -18,9 +18,9 @@ export default function HeaderTop () {
         <section className="header-top">
             <div className="contact-me"onClick={funcPhone} >{textPhone}</div>
             <ul className="social-networks">
-                <li><a href="https://www.facebook.com/megaconstructores.pe"><i className="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCAB76OR0jYOaMxKwYE_NvBQ"><i className="fa-brands fa-youtube"></i></a></li>
-                <li><a href="https://www.instagram.com/megaconstructores.pe/"><i className="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/megaconstructores.pe" target="_blanck"><i className="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAB76OR0jYOaMxKwYE_NvBQ" target="_blanck"><i className="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/megaconstructores.pe/" target="_blanck"><i className="fa-brands fa-instagram"></i></a></li>
             </ul>
         </section>
     );
