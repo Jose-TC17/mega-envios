@@ -11,12 +11,39 @@ import imgCuzco from "../img/imgCuzco.jpg";
 import imgAmazonas from "../img/imgAmazonas.jpg";
 
 import banner from "../img/fondoMegaEnvios.png";
+import { useState } from 'react';
+
+import imgMapaLima from "../img/mapaLima.png"
+import imgMapaLima2 from "../img/mapaLima2.png"
 
 
 export default function Index() {
 
     const imgR: string[] = [imgLima, imgArequipa, imgCuzco, imgAmazonas];
 
+    const [info, setInfo] = useState("Envíos");
+
+    // modifica el handle clik para ver el boton que esta clickeando
+    const handleClick = (newInfo: string) => {
+      setInfo(newInfo);
+    }
+
+    const textMegaShipping = () => {
+      return [`Mega Envíos ofrece un servicio de envíos confiable y eficiente, asegurando que sus productos lleguen de manera puntual y segura,
+      el servicio de Mega Envíos es la opción para los que buscan una opción económica y accesible. 
+      Entregas a todo Lima Metropolitana el mismo día a plazo de 24 horas, y entregas de los productos en provincia en plazo de 48 a 72 horas hábiles.
+      `, 
+      `Mega Envíos Express es un servicio para aquello que necesitan mayor rapidez, poniendo tu pedido en prioridad, 
+      asegurando un mejor servicio en velocidad y eficiencia haciendo que sea la mejor opción para envios urgentes a Lima, entregando tu pedido en menos de 24 horas hábiles en todo Lima
+      Metropolitana y entregas de los productos en provincia en plazo de 24 a 48 horas hábiles.
+      `];
+    }
+
+   
+
+    const [ text1, text2 ] = textMegaShipping()
+    const infoPaf: string = info ===  "Envíos EXPRESS" ? text2 : text1;
+     
     return (
         <>
             <Header />
@@ -29,7 +56,7 @@ export default function Index() {
         <div className="container-note">
           <p className="section-p">
             <span>NOTA:</span> <br />
-            Hola, Bienvenido estimado amigo: <br />
+            Hola, Bienvenido estimado Cliente: <br />
             En esta presentación, te compartimos como realizamos nuestros envíos
             a Nivel Nacional para poder ofrecerte un mejor servicio, que sea
             confiable, rapido y accesible.
@@ -61,13 +88,27 @@ export default function Index() {
                 alt="imagen de los mapas relacionados"
               />
             </figure>
-            <a className="sectionTwo-a" href={element[3]}>
+            <button className={["sectionTwo-a",`${element[3]}`].join(" ")} onClick={() => handleClick(`${element[1]}`)} >
               <span>Más información</span>
-            </a>
+            </button>
           </div>
         ))}
       </section>
-            <Footer/>
+      <section className="section-info">
+        <div className="container-section-info">
+          <h3 className='title-info'>Detalles de <b>Mega</b> <span>{info}</span></h3>
+          <p className='paf-info'>{infoPaf}</p>
+        </div>
+        <div className="container-images-info">
+          <figure>
+            <img src={imgMapaLima} alt="" />
+          </figure>
+          <figure>
+            <img src={imgMapaLima2} alt="" />
+          </figure>
+        </div>
+      </section>
+      <Footer/>
         </>
     )
 }

@@ -1,25 +1,26 @@
 .footer {
     width: 100%;
-    height: 50px;
     display: flex;
-    flex-direction: row;
+    height: auto;
+    gap: 10px;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: rgb(44, 54, 77);
 }
 
+@media (min-width: 800px) {
+    .footer {
+        flex-direction: row;
+        height: 50px;
+    }
+}
+
 .footer-label {
     color: var(--color-white);
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0 10px;
     font-family: system-ui;
-    margin-left: 20px;
-}
-
-.footer-copy {
-    color: var(--color-white);
-    font-family: system-ui;
-    font-weight: 600;
 }
 
 /* estilos de las redes sociales */
@@ -27,8 +28,20 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    margin-bottom: 20px;
     margin-right: 20px;
+    margin-left: 20px;
 }
+
+@media (min-width: 800px) {
+    .footer-label {
+        margin-left: 20px;
+    }
+    .social-network-footer {
+        margin-bottom: 0;
+    }
+}
+
 
 .social-network-footer li{
     list-style: none;

@@ -12,8 +12,7 @@ export default function Footer (){
     
     return (
         <footer className="footer">
-            <label className="footer-label">Creado por Corporación Mega Constructores</label>
-            <label className="footer-copy">copyright © <span>{year}</span></label>
+            <label className="footer-label">Creado por Corporación Mega Constructores copyright © <span>{year}</span></label>
             <ul className="social-network-footer">
                 <li><a className="facebook" target="_blank" href="https://www.facebook.com/megaconstructores.pe"><i className="fa-brands fa-facebook"></i></a></li>
                 <li><a className="youtube" target="_blank" href="https://www.youtube.com/channel/UCAB76OR0jYOaMxKwYE_NvBQ"><i className="fa-brands fa-youtube"></i></a></li>

@@ -57,7 +57,7 @@
     margin-top: 30px;
 }
 
-@media (min-width: 610px) {
+@media (min-width: 620px) {
     .container-note {
         width: 600px;
     }
@@ -236,6 +236,8 @@
     margin-top: 30px;
     line-height: 40px;
     height: 40px;
+    border: none;
+    cursor: pointer;
     color: var(--color-white);
     z-index: 1;
     background: rgb(41, 187, 255);
@@ -261,5 +263,103 @@
     background: rgb(39, 164, 247);
     top: 0;
     left: 0;
+}
+
+.section-info {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-section-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 20px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgb(212, 212, 212) ;
+}
+
+
+@media (min-width: 920px){
+    .container-section-info {
+        width: 880px;
+    }
+}
+
+.title-info {
+    font-family: system-ui;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--color-blue-dark);
+}
+
+.title-info b {
+    text-transform: uppercase;
+}
+
+.title-info span {
+    font-weight: 700;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+}
+
+.paf-info {
+    font-family: system-ui;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 20px 20px 20px;
+}
+
+
+.container-images-info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .container-images-info {
+        padding: 0 30px;
+    }
+}
+
+.container-images-info figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    width: 90%;
+}
+
+@media (min-width: 600px) {
+    .container-images-info figure{
+        width: 400px;
+    }
+}
+
+@media (min-width: 950px) {
+    .container-images-info  figure{
+        width: 430px;
+    }
+}
+
+.container-images-info img {
+    transition: .3s;
+    width: 100%;
+}
+
+.container-images-info img:hover {
+    transform: scale(1.1);
 }
 

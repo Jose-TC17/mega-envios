@@ -1,10 +1,10 @@
-import imgMapPeru from "../img/MapaPeru.png"
-import imgMapPeruLima from "../img/MapaPeruLima.png"
+import imgMegaEnvios from "../img/megaEnvios.png"
+import imgMegaEnviosExpress from "../img/megaEnviosExpress.png"
 
 
 const sectionSends: string[][] = [
-  ["megaEnvios", "Envíos", imgMapPeruLima, "./envios-lima",],
-  ["megaEnviosExpress", "Envíos EXPRESS", imgMapPeru, "./envios-provinciales",],
+  ["megaEnvios", "Envíos", imgMegaEnvios, "ME"],
+  ["megaEnviosExpress", "Envíos EXPRESS", imgMegaEnviosExpress, "MEE"],
 ];
 
 

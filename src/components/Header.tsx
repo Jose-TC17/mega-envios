@@ -6,11 +6,11 @@ import imgMegaEnvios from "../img/logoME.png";
 import HeaderTop from "./HeaderTop";
 
 export default function Header() {
-    const [textH, setTextH] = useState<string>(() => window.innerWidth > 600 ? "Ir a Mega Constructores" : "🌐")
+    const [textH, setTextH] = useState<string>(() => window.innerWidth > 600 ? "Ir a Mega Constructores" : "Web")
 
     useEffect(()=>{
         const handleResize = () => {
-            const verify = window.innerWidth > 600 ? "Ir a Mega Constructores" : "🌐";
+            const verify = window.innerWidth > 600 ? "Ir a Mega Constructores" : "Web";
             setTextH(verify);
         };
 
