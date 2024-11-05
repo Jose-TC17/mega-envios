@@ -13,8 +13,8 @@ import imgAmazonas from "../img/imgAmazonas.jpg";
 import banner from "../img/fondoMegaEnvios.png";
 import { useState } from 'react';
 
-import imgMapaLima from "../img/mapaLima.png"
-import imgMapaLima2 from "../img/mapaLima2.png"
+import imgMapaLima from "../img/Mapa.png"
+import imgMapaLima2 from "../img/MapaTwo.png"
 
 
 export default function Index() {
