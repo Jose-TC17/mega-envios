@@ -67,38 +67,31 @@
     box-shadow: 2px 4px 10px rgba(139, 139, 139, 0.5);
 }
 
-/* estilos de la letra */
-.section-p {
-    font-family: system-ui;
-    padding: 0 15px 15px 15px;
-}
-
-/* estilo del span */
-.section-p span{
-    color: rgb(43, 167, 43);
-    font-weight: 600;
-    line-height: 30px;
-}
-
 /* estilo del slider de las imagenes */
 .slider-images {
-    width: 70%;
+    width: 90%;
     align-items: center;
     overflow: hidden;
     justify-content: space-between;
     margin-top: 60px;
 }
 
+@media (min-width: 1500px) {
+    .slider-images {
+        width: 1500px;
+    }
+}
+
 /* estilo del contenedor de las imagenes */
 .container-imgs {
     display: flex;
     flex-direction: row;
-    gap: 22px;
-    animation: slider-country 7s infinite linear;
+    gap: 20px;
+    animation: slider-country 6s infinite linear;
     overflow: hidden;
     justify-content: start;
     align-items: center;
-    width: calc(350px * 8) ;
+    width: calc(350px * 10 + 20px) ;
 }
 
 @keyframes slider-country {
@@ -106,7 +99,7 @@
         transform: translateX(0%);
     }
     100%{
-        transform: translateX(calc(-350px * 4));
+        transform: translateX(calc(-350px * 5 + 20px));
     }
 }
 
@@ -138,49 +131,145 @@
 /* estilo de la segundo seccion */
 .section-two {
     width: 100%;
-    margin-top: 90px;
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    min-height: 600px;
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    padding: 20px 0;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: start;
     margin-bottom: 60px;
     justify-content: space-evenly;
+    position: relative;
 }
 
+@media (min-width: 1200px) {
+    .section-two {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .section-two {
+        justify-content: center;
+        gap: 80px;
+    }
+}
 
 /* estilos de las seccion a escoger */
-.megaEnvios, .megaEnviosExpress{
+.megaEnvios.active{
     display: flex;
     width: 90%;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     transition: .3s;
-    overflow: hidden;
     gap: 20px;
     justify-content: center;
-    padding: 40px 30px;
+    box-shadow: 0 0 20px rgb(238, 238, 238);
+    padding: 30px;
+    border-radius: 15px;
+    animation: animate-intro .2s 1 linear;
+}
+
+.details-megaShipping {
+    display: none;
+    width: 90%;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+    gap: 20px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgb(238, 238, 238);
+    padding: 30px;
     border-radius: 15px;
 }
 
+.details-megaShipping h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.details-megaShipping h3 b {
+    font-weight: 800;
+}
+
+.details-megaShipping h3 span{
+    color: var(--color-yellow);
+}
+
+.details-megaShipping.active {
+    animation: animate-intro .2s 1 linear;
+    display: flex;
+}
+
+@keyframes animate-intro {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.megaEnvios.display-none{
+    display: none;
+}
+
 @media (min-width: 500px) {
-    .megaEnvios, .megaEnviosExpress{
+    .megaEnvios.active, .details-megaShipping{
         width: 80%;
     }
 }
 
 @media (min-width: 900px) {
-    .megaEnvios, .megaEnviosExpress{
-        width: auto;
+    .megaEnvios.active, .details-megaShipping {
+        width: 800px;
     }
 }
 
 @media (min-width: 1200px) {
-    .megaEnvios, .megaEnviosExpress{
+    .megaEnvios.active, .details-megaShipping {
+        width: 600px;
         padding: 40px 60px;
     }
 }
 
-.megaEnvios:hover, .megaEnviosExpress:hover{
-    background: rgb(248, 248, 248);
+.megaEnvios.active:hover, .details-megaShipping:hover {
+    background: rgb(250, 250, 250);
+
+;
+}
+
+/* texto del parrafo de detalles de mega envios */
+.paf-details-megaShipping {
+    font-size: 15px;
+    font-family: system-ui;
+    line-height: 24px;
+}
+
+@media (min-width: 400px) {
+    .paf-details-megaShipping {
+        font-size: 16px;
+        font-family: system-ui;
+        line-height: 24px;
+    }
+}
+
+.paf-details-megaShipping i {
+    color: rgb(146, 146, 146);
+}
+
+/* estilos de la animacion de gif */
+.animation-gif {
+    height: 160px;
 }
 
 /* estilos del titulo */
@@ -224,6 +313,51 @@
     width: 100%;
 }
 
+
+/* estilos de los dos botones */
+/* boton 1 */
+.clickReturn {
+    width: 200px;
+    text-align: center;
+    font-family: system-ui;
+    font-size: 18px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: 30px;
+    line-height: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    z-index: 1;
+    background: rgb(41, 187, 255);
+}
+
+.clickReturn span {
+    z-index: 1;
+}
+
+.clickReturn::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: rgb(25, 165, 221);
+    top: 0;
+    transition: .3s;
+    left: -200px;
+    z-index: -1;
+}
+
+.clickReturn:hover::after {
+    background: rgb(39, 164, 247);
+    top: 0;
+    left: 0;
+}
+
+/* boton 2 */
 .sectionTwo-a {
     width: 200px;
     text-align: center;
@@ -363,3 +497,67 @@
     transform: scale(1.1);
 }
 
+/* estilos para la lista */
+.section-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    box-shadow: 0 0 20px rgb(238, 238, 238);
+    overflow: hidden;
+    transition: .3s;
+    gap: 30px;
+    padding: 30px 0;
+    border-radius: 15px;
+}
+
+.section-list:hover {
+    background: rgb(250, 250, 250);
+}
+
+.section-list h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.section-list li {
+    list-style: "✅  ";
+    font-family: system-ui;
+    font-size: 16px;
+}
+
+@media (min-width: 400px) {
+    .section-list {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 500px) {
+    .section-list{
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-list {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-list {
+        width: 400px;
+    }
+}

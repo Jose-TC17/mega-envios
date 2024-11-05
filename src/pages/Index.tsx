@@ -9,41 +9,32 @@ import imgLima from "../img/imgLima.jpg";
 import imgArequipa from "../img/imgArequipa.jpg";
 import imgCuzco from "../img/imgCuzco.jpg";
 import imgAmazonas from "../img/imgAmazonas.jpg";
+import imgSanMartin from "../img/imgSanMartin.jpg";
 
 import banner from "../img/fondoMegaEnvios.png";
-import { useState } from 'react';
 
-import imgMapaLima from "../img/Mapa.png"
-import imgMapaLima2 from "../img/MapaTwo.png"
+import animationGif from "../img/animation-gif.gif";
+
+import { useState } from 'react';
 
 
 export default function Index() {
 
-    const imgR: string[] = [imgLima, imgArequipa, imgCuzco, imgAmazonas];
+    const imgR: string[] = [imgLima, imgArequipa, imgCuzco, imgAmazonas, imgSanMartin];
 
-    const [info, setInfo] = useState("Envíos");
+    const [info, setInfo] = useState(false);
 
-    // modifica el handle clik para ver el boton que esta clickeando
-    const handleClick = (newInfo: string) => {
-      setInfo(newInfo);
+    const handleClick = () => {
+      setInfo(true)
     }
 
-    const textMegaShipping = () => {
-      return [`Mega Envíos ofrece un servicio de envíos confiable y eficiente, asegurando que sus productos lleguen de manera puntual y segura,
-      el servicio de Mega Envíos es la opción para los que buscan una opción económica y accesible. 
-      Entregas a todo Lima Metropolitana el mismo día a plazo de 24 horas, y entregas de los productos en provincia en plazo de 48 a 72 horas hábiles.
-      `, 
-      `Mega Envíos Express es un servicio para aquello que necesitan mayor rapidez, poniendo tu pedido en prioridad, 
-      asegurando un mejor servicio en velocidad y eficiencia haciendo que sea la mejor opción para envios urgentes a Lima, entregando tu pedido en menos de 24 horas hábiles en todo Lima
-      Metropolitana y entregas de los productos en provincia en plazo de 24 a 48 horas hábiles.
-      `];
+    const handleClickReturn = () => {
+        setInfo(false)
     }
 
-   
+    const verifyClass: string = info ? "active" : "";
+    const verifyClassR: string = info ? "display-none" : "active";
 
-    const [ text1, text2 ] = textMegaShipping()
-    const infoPaf: string = info ===  "Envíos EXPRESS" ? text2 : text1;
-     
     return (
         <>
             <Header />
@@ -51,17 +42,6 @@ export default function Index() {
             <figure className="banner">
               <img src={banner} alt="banner" />
             </figure>
-
-        <h1 className="section-title">Envíos a Nivel Nacional</h1>
-        <div className="container-note">
-          <p className="section-p">
-            <span>NOTA:</span> <br />
-            Hola, Bienvenido estimado Cliente: <br />
-            En esta presentación, te compartimos como realizamos nuestros envíos
-            a Nivel Nacional para poder ofrecerte un mejor servicio, que sea
-            confiable, rapido y accesible.
-          </p>
-        </div>
         <div className="slider-images">
             <div className="container-imgs">
                 {imgR.map((element, index)=>(
@@ -78,8 +58,24 @@ export default function Index() {
         </div>
       </section>
       <section className="section-two">
+        <div className={["container-details details-megaShipping", `${verifyClass}`].join(" ")}>
+            <h3>Detalles sobre <b>MEGA <span>ENVÍOS</span></b></h3>
+            <p className='paf-details-megaShipping'>
+              Aseguramos que tus 
+              productos lleguen de manera puntual y segura, mejorando la eficiencia
+              de las entregas de tus pedidos. <br />
+              Envíamos a toda <b>Lima Metropolitana</b> y distritos seleccionados entregando tu 
+              producto en menos de 24 horas hábiles; y envíos a todo el <b>Perú </b>
+              en un plazo de 24 a 48 horas hábiles. <br />
+              <i><b>Gracias por su atención...</b></i>
+            </p>
+            <img className='animation-gif' src={animationGif} alt="" />
+            <button className="clickReturn" onClick={handleClickReturn} >
+                <span>Volver</span>
+            </button>
+        </div>
         {sectionSends.map((element, index) => (
-          <div className={element[0]} key={index}>
+          <div className={[element[0], verifyClassR].join(" ")} key={index}>
             <h3>Mega <span>{element[1]}</span></h3>
             <figure className="sectionTwo-figure">
               <img
@@ -88,25 +84,23 @@ export default function Index() {
                 alt="imagen de los mapas relacionados"
               />
             </figure>
-            <button className={["sectionTwo-a",`${element[3]}`].join(" ")} onClick={() => handleClick(`${element[1]}`)} >
+            <button className="sectionTwo-a" onClick={handleClick} >
               <span>Más información</span>
             </button>
           </div>
         ))}
-      </section>
-      <section className="section-info">
-        <div className="container-section-info">
-          <h3 className='title-info'>Detalles de <b>Mega</b> <span>{info}</span></h3>
-          <p className='paf-info'>{infoPaf}</p>
-        </div>
-        <div className="container-images-info">
-          <figure>
-            <img src={imgMapaLima} alt="" />
-          </figure>
-          <figure>
-            <img src={imgMapaLima2} alt="" />
-          </figure>
-        </div>
+          <ul className="section-list">
+            <h3>Te Ofrecemos:</h3>
+            <div className="list">
+              <li>Responsabilidad</li>
+              <li>Eficacia</li>
+              <li>Envíos Rápidos</li>
+              <li>Seguridad</li>
+              <li>Seguimiento</li>
+              <li>Compromiso</li>
+              <li>Soporte</li>
+            </div>
+          </ul>
       </section>
       <Footer/>
         </>
