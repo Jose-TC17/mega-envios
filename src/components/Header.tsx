@@ -29,7 +29,7 @@ export default function Header() {
             <picture className="header-picture">
                 <img src={imgMegaEnvios} alt="logo de mega envios" className="header-logo" />
             </picture>
-            <a href="https://https://www.megaconstructores.pe/" className="header-link-home" title="Ir a Megaconstructores">{textH}</a>
+            <a href="https://www.megaconstructores.pe/" className="header-link-home" title="Ir a Megaconstructores">{textH}</a>
         </header>
         </>
     )
